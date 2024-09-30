@@ -1,0 +1,7 @@
+- name: "Install and configure zabbix agent"
+  hosts: databases
+
+  pre_tasks:
+    - name: "Debug message"
+      ansible.builtin.debug:
+        msg: "Well done !! ^xd"
