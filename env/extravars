@@ -1,0 +1,4 @@
+---
+ansible_remote_tmp: "/tmp/.ansible-${USER}/tmp"
+ansible_become_user: root
+ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
