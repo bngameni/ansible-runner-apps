@@ -1,0 +1,18 @@
+- name: "Install and configure zabbix agent"
+  hosts: monitored_servers
+
+  pre_tasks:
+    - name: "Add zabbix server to /etc/hosts"
+      ansible.builtin.lineinfile:
+        path: "/etc/hosts"
+        line: "{{ zabbix_api_server_ip }} {{ zabbix_api_server_host }}"
+        state: present
+      become: true
+
+  tasks:
+    - name: Install from community role
+      ansible.builtin.include_role:
+        name: community.zabbix.zabbix_agent
+      vars:
+        zabbix_agent2: true        # noqa var-naming
+        zabbix_agent_server: "{{ zabbix_api_server_host }}"

@@ -1,0 +1,39 @@
+all:
+  children:
+    debian_servers:
+      children:
+        k8s_cluster:
+        databases:
+        webservers:
+
+    monitored_servers:
+      children:
+        databases:
+        webservers:
+        os_legacies:
+
+    k8s_cluster:
+      children:
+        masters:
+          hosts:
+            master-00.bngameni.local:
+              ansible_host: 192.168.1.39
+        slaves:
+          hosts:
+            slave-00.bngameni.local:
+              ansible_host: 192.168.1.148
+
+    databases:
+      hosts:
+        db-00.bngameni.local:
+          ansible_host: 192.168.1.52
+
+    webservers:
+      hosts:
+        web-00.bngameni.local:
+          ansible_host: 192.168.1.41
+
+    # os_legacies:
+    #   hosts:
+    #     debian-7-legacy.bngameni.local:
+    #       ansible_host: 192.168.1.40

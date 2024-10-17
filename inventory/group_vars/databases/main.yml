@@ -1,0 +1,3 @@
+---
+# zabbix agent configuration
+zabbix_agent_serveractive: false

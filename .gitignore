@@ -35,3 +35,19 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Ignore venv
+**/.venv
+
+# Ignore collections and roles downloaded
+**/roles/*
+!**/project/roles/requirements.yml
+**/project/collections/*
+!**/project/collections/requirements.yml
+
+# Ignore secrets files
+**/.secrets
+**/.envrc 
+
+## Ignore ansible runners artifacts
+**/artifacts

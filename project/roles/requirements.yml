@@ -1,0 +1,4 @@
+---
+roles:
+  - name: claranet.motd
+  - name: bngameni.compose_deploy
