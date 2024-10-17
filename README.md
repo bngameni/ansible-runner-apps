@@ -20,3 +20,15 @@ ansible-vault create /path/to/secrets.yml --vault-password-file=/path/to/vault-p
 ansible-vault edit /path/to/secrets.yml --vault-password-file=/path/to/vault-pass-file
 ```
 PS: You can use ANSIBLE_VAULT_PASSWORD_FILE environment variable and remove --vault-password parameter
+
+
+&nbsp;
+&nbsp;
+
+## Zabbix agent install
+
+At the root directory, type: 
+
+```bash
+ansible-runner run . -p zabbix_agent.yml
+```
