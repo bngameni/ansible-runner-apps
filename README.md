@@ -11,6 +11,8 @@ ansible-inventory -i inventory/hosts/vbox.yml --graph
 ansible-inventory -i inventory/hosts/vbox.yml --list
 ```
 
+* Install sshpass program if you want to ssh using ansible_ssh_pass
+
 * Create and edit vault secret file
 
 ```bash
